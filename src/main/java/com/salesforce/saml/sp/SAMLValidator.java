@@ -116,10 +116,7 @@ public class SAMLValidator {
             } else throw new Exception("No Signature");
         }
 
-        if (!isValid) {
-            throw new Exception("Invalid Signature");
-        } else {
-
+        if (isValid) {
             Node issuerNode = (Node) issuerXPath.evaluate(assertionNode, XPathConstants.NODE);
             String assertedIssuer = issuerNode.getTextContent();
             if (!issuer.equals(assertedIssuer)) throw new Exception("Invalid Issuer");
@@ -143,9 +140,15 @@ public class SAMLValidator {
             //get the subject
             Node nameIdNode = (Node) nameIDXPath.evaluate(assertionNode, XPathConstants.NODE);
             identity = new Identity(nameIdNode.getTextContent());
+
+            //TODO - parse out the attributes
+
+        } else {
+
+            throw new Exception("Invalid Signature");
+
         }
 
-        //Real implementation should probably just return the validated node, or an object.
         return identity;
         
     }
@@ -167,13 +170,12 @@ public class SAMLValidator {
             String refURIStripped = refURI.substring(1);
             if (!id.equals(refURIStripped)) throw new Exception("Signature Reference is NOT targeting enveloping node: " + id + "|" + refURIStripped);
         }
+
         return xs.validate(valContext);
 
     }
 
-
     public static void main(String[] args) {
-
 
         SAMLValidator sv = new SAMLValidator();
         try {
@@ -182,7 +184,6 @@ public class SAMLValidator {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
 
     }
 

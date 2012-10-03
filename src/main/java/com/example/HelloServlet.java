@@ -43,14 +43,14 @@ public class HelloServlet extends HttpServlet {
 
 
 	@Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         ServletOutputStream out = resp.getOutputStream();
         String encodedResponse = req.getParameter("SAMLResponse");
 
         SAMLValidator sv = new SAMLValidator();
         try {
-            Identity identity = sv.validate(encodedResponse, cert, "https://identity.prerelna1.pre.my.salesforce.com", "https://salesforceidentity.herokuapp.com/saml/", "https://salesforceidentity.herokuapp.com/saml2sp/");
+            Identity identity = sv.validate(encodedResponse, cert, "https://identity.prerelna1.pre.my.salesforce.com", "https://samlsp.herokuapp.com/hello", "https://samlsp.herokuapp.com/hello");
             if (identity != null) out.write(identity.getSubject().getBytes("UTF-8"));
         } catch (Exception e) {
             out.write(e.getMessage().getBytes());
