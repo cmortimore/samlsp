@@ -9,10 +9,12 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.text.MessageFormat;
 import java.util.zip.Deflater;
+import java.util.zip.DeflaterOutputStream;
 
 
 public class SAMLFilter implements Filter {
@@ -101,14 +103,16 @@ public class SAMLFilter implements Filter {
                 html = new MessageFormat(requestTemplate);
                 String requestXml = html.format(args);
                 byte[] input = requestXml.getBytes("UTF-8");
-                byte[] output = new byte[10000];
-                Deflater compresser = new Deflater();
-                compresser.setInput(input);
-                compresser.finish();
-                int compressedDataLength = compresser.deflate(output);
-                System.out.println("LENGHT OF OUTPUT ------> " + compressedDataLength);
-                String encodedRequest = Base64.encodeBase64String(output);
+
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                Deflater d = new Deflater();
+                DeflaterOutputStream dout = new DeflaterOutputStream(baos, d);
+                dout.write(input);
+                dout.close();
+
+                String encodedRequest = Base64.encodeBase64String(baos.toByteArray());
                 String SAMLRequest = URLEncoder.encode(encodedRequest,"UTF-8");
+                System.out.println("SAMLRequest:" + SAMLRequest );
 
                 httpResponse.sendRedirect("https://identity.prerelna1.pre.my.salesforce.com/idp/endpoint/HttpRedirect?SAMLRequest=" + SAMLRequest + "&RelayState=" + httpRequest.getRequestURI());
                 return;
