@@ -68,7 +68,7 @@ public class SAMLFilter implements Filter {
 
                 SAMLValidator sv = new SAMLValidator();
                 try {
-                    identity = sv.validate(encodedResponse, cert, "https://identity.prerelna1.pre.my.salesforce.com", "https://samlsp.herokuapp.com/hello", "https://samlsp.herokuapp.com/hello");
+                    identity = sv.validate(encodedResponse, cert, "https://identity.prerelna1.pre.my.salesforce.com", "https://samlsp.herokuapp.com/_saml", "https://samlsp.herokuapp.com/");
                     session.setAttribute(IDENTITY, identity);
                 } catch (Exception e) {
                     e.printStackTrace();

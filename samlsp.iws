@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82586c5a-cbf5-41fa-a37d-f3bfd9bdcea6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/TestSAMLValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samlsp.iws" afterPath="$PROJECT_DIR$/samlsp.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java" />
     </list>
     <ignored path="samlsp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SAMLFilter.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SAMLFilter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="124" selection-start="4166" selection-end="4166" vertical-scroll-proportion="0.0">
+            <state line="70" column="186" selection-start="3463" selection-end="3463" vertical-scroll-proportion="0.57543105">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HelloServlet.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HelloServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="21" selection-start="874" selection-end="874" vertical-scroll-proportion="0.6540881">
+            <state line="21" column="81" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,8 +123,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/TestSAMLValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java" />
       </list>
     </option>
   </component>
@@ -844,18 +841,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="124" selection-start="4166" selection-end="4166" vertical-scroll-proportion="0.0">
+        <state line="21" column="81" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="21" selection-start="874" selection-end="874" vertical-scroll-proportion="0.6540881">
+        <state line="70" column="186" selection-start="3463" selection-end="3463" vertical-scroll-proportion="0.57543105">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

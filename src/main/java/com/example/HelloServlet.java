@@ -19,7 +19,7 @@ public class HelloServlet extends HttpServlet {
 
         ServletOutputStream out = resp.getOutputStream();
 
-        Identity identity = req.getSession().getAttribute("IDENTITY")
+        Identity identity = (Identity) req.getSession().getAttribute("IDENTITY");
 
         if (identity != null) {
             out.write(identity.getSubject().getBytes("UTF-8"));
