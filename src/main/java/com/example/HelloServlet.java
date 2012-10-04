@@ -56,6 +56,7 @@ public class HelloServlet extends HttpServlet {
                 out.write(identity.attributes.toString().getBytes("UTF-8"));
             }
         } catch (Exception e) {
+            e.printStackTrace();
             out.write(e.getMessage().getBytes());
         }
         out.flush();

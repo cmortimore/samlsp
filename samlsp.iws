@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82586c5a-cbf5-41fa-a37d-f3bfd9bdcea6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/Identity.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/Identity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samlsp.iws" afterPath="$PROJECT_DIR$/samlsp.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java" />
     </list>
     <ignored path="samlsp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,7 +84,7 @@
       <file leaf-file-name="HelloServlet.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="76" selection-start="3163" selection-end="3163" vertical-scroll-proportion="0.76404494">
+            <state line="58" column="32" selection-start="3242" selection-end="3242" vertical-scroll-proportion="0.8146067">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -782,7 +778,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="76" selection-start="3163" selection-end="3163" vertical-scroll-proportion="0.76404494">
+        <state line="58" column="32" selection-start="3242" selection-end="3242" vertical-scroll-proportion="0.8146067">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
