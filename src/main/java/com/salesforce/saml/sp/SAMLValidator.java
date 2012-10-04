@@ -1,5 +1,7 @@
 package com.salesforce.saml.sp;
 
+import com.salesforce.saml.Identity;
+import com.salesforce.saml.SAMLException;
 import org.apache.commons.codec.binary.Base64;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -83,69 +85,88 @@ public class SAMLValidator {
         XPathExpression subjectConfirmationDataXPath = xpath.compile("saml:Subject/saml:SubjectConfirmation/saml:SubjectConfirmationData");
         XPathExpression conditionsXPath = xpath.compile("saml:Conditions");
         XPathExpression audienceXPath = xpath.compile("saml:Conditions/saml:AudienceRestriction/saml:Audience");
+        XPathExpression attributeXPath = xpath.compile("/samlp:Response/saml:Assertion/saml:AttributeStatement");
+
 
         //Get the Response node and fail if more than one
         NodeList responseXPathResult = (NodeList) responseXPath.evaluate(responseDocument, XPathConstants.NODESET);
-        if (responseXPathResult.getLength() != 1) throw new Exception("More than 1 Response");
+        if (responseXPathResult.getLength() != 1) throw new SAMLException("More than 1 Response");
         Node responseNode = responseXPathResult.item(0);
 
         //Get the Assertion node and fail if more than one
         NodeList assertionXPathResult = (NodeList) assertionXPath.evaluate(responseDocument, XPathConstants.NODESET);
-        if (assertionXPathResult.getLength() != 1) throw new Exception("More than 1 Assertion");
+        if (assertionXPathResult.getLength() != 1) throw new SAMLException("More than 1 Assertion");
         Node assertionNode = assertionXPathResult.item(0);
 
         //See if the response is signed
         NodeList responseXPathSignatureResult = (NodeList) responseSignatureXPath.evaluate(responseDocument, XPathConstants.NODESET);
+
         if (responseXPathSignatureResult.getLength() > 1) {
-            throw new Exception("More than 1 Response Signature");
+
+            throw new SAMLException("More than 1 Response Signature");
+
         } else if (responseXPathSignatureResult.getLength() == 1) {
-            //Response is signed
+
+            //Check the response signature
             String responseId = responseNode.getAttributes().getNamedItem("ID").getTextContent();
             Node signature = responseXPathSignatureResult.item(0);
             isValid = validateSignature(signature, responseId);
+
         } else {
-            //No response signature.  Check to see if assertion is signed
+
+            //No response signature.  Check the assertion signature
             NodeList assertionSignatureXPathResult = (NodeList) assertionSignatureXPath.evaluate(responseDocument, XPathConstants.NODESET);
-            if (assertionSignatureXPathResult.getLength() == 1) {
+            if (assertionSignatureXPathResult.getLength() > 1) {
+                throw new SAMLException("More than 1 Assertion Signature");
+            } else if (assertionSignatureXPathResult.getLength() ==1 ) {
                 String assertionId = assertionNode.getAttributes().getNamedItem("ID").getTextContent();
                 Node signature = assertionSignatureXPathResult.item(0);
                 isValid = validateSignature(signature, assertionId);
-            }
-            else if (assertionSignatureXPathResult.getLength() > 1) {
-                throw new Exception("More than 1 Assertion Signature");
-            } else throw new Exception("No Signature");
+            } else throw new SAMLException("No Signature");
+
         }
 
         if (isValid) {
+
+            //check the issuer
             Node issuerNode = (Node) issuerXPath.evaluate(assertionNode, XPathConstants.NODE);
             String assertedIssuer = issuerNode.getTextContent();
-            if (!issuer.equals(assertedIssuer)) throw new Exception("Invalid Issuer");
+            if (!issuer.equals(assertedIssuer)) throw new SAMLException("Invalid Issuer");
 
+            //check the recipient
             Node subjectConfirmationDataNode = (Node) subjectConfirmationDataXPath.evaluate(assertionNode, XPathConstants.NODE);
             String assertedRecipient = subjectConfirmationDataNode.getAttributes().getNamedItem("Recipient").getTextContent();
-            if (!recipient.equals(assertedRecipient)) throw new Exception("Invalid Recipient");
+            if (!recipient.equals(assertedRecipient)) throw new SAMLException("Invalid Recipient");
 
+            //check the audience
             Node audienceNode = (Node) audienceXPath.evaluate(assertionNode, XPathConstants.NODE);
             String assertedAudience = audienceNode.getTextContent();
-            if (!audience.equals(assertedAudience)) throw new Exception("Invalid Audience");
+            if (!audience.equals(assertedAudience)) throw new SAMLException("Invalid Audience");
 
+            //Check the validity
             Node conditionsNode = (Node) conditionsXPath.evaluate(assertionNode, XPathConstants.NODE);
             String notOnOrAfter = conditionsNode.getAttributes().getNamedItem("NotOnOrAfter").getTextContent();
             String notBefore = conditionsNode.getAttributes().getNamedItem("NotBefore").getTextContent();
             Calendar start = DatatypeConverter.parseDateTime(notBefore);
             Calendar end = DatatypeConverter.parseDateTime(notOnOrAfter);
-            if ( System.currentTimeMillis() <= start.getTimeInMillis() ) throw new Exception("Assertion appears to have arrived early");
-            if ( System.currentTimeMillis() > end.getTimeInMillis() ) throw new Exception("Assertion Expired");
+            if ( System.currentTimeMillis() <= start.getTimeInMillis() ) throw new SAMLException("Assertion appears to have arrived early");
+            if ( System.currentTimeMillis() > end.getTimeInMillis() ) throw new SAMLException("Assertion Expired");
 
             //get the subject
             Node nameIdNode = (Node) nameIDXPath.evaluate(assertionNode, XPathConstants.NODE);
             identity = new Identity(nameIdNode.getTextContent());
 
-            //TODO - parse out the attributes
+            NodeList attributeXPathResult = (NodeList) attributeXPath.evaluate(responseDocument, XPathConstants.NODESET);
+            for(int i=0; i < attributeXPathResult.getLength(); i++){
+                Node childNode = attributeXPathResult.item(i);
+                String name = childNode.getAttributes().getNamedItem("Name").getTextContent();
+                String value = childNode.getFirstChild().getTextContent();
+                identity.attributes.put(name,value);
+            }
 
         } else {
 
-            throw new Exception("Invalid Signature");
+            throw new SAMLException("Invalid Signature");
 
         }
 
@@ -155,20 +176,22 @@ public class SAMLValidator {
 
     private boolean validateSignature(Node signature, String id) throws Exception {
 
+        //parse PEM
         CertificateFactory cf = CertificateFactory.getInstance("X.509");
         Certificate certificate = cf.generateCertificate(new ByteArrayInputStream(cert.getBytes("UTF-8")));
+
 
         DOMValidateContext valContext = new DOMValidateContext (certificate.getPublicKey(), signature);
         XMLSignatureFactory xsf = XMLSignatureFactory.getInstance("DOM");
         XMLSignature xs = xsf.unmarshalXMLSignature(valContext);
 
         List<Reference> references = xs.getSignedInfo().getReferences();
-        if (references.size() != 1) throw new Exception("1 and Only 1 Reference is allowed");
+        if (references.size() != 1) throw new SAMLException("1 and Only 1 Reference is allowed");
         Reference ref = references.get(0);
         String refURI = ref.getURI();
         if ((refURI != null) && (!refURI.equals(""))) {
             String refURIStripped = refURI.substring(1);
-            if (!id.equals(refURIStripped)) throw new Exception("Signature Reference is NOT targeting enveloping node: " + id + "|" + refURIStripped);
+            if (!id.equals(refURIStripped)) throw new SAMLException("Signature Reference is NOT targeting enveloping node: " + id + "|" + refURIStripped);
         }
 
         return xs.validate(valContext);

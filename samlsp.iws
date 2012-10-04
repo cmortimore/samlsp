@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82586c5a-cbf5-41fa-a37d-f3bfd9bdcea6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/Identity.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/Identity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samlsp.iws" afterPath="$PROJECT_DIR$/samlsp.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java" />
     </list>
@@ -65,7 +68,7 @@
       <file leaf-file-name="SAMLValidator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="0" selection-start="18371" selection-end="18371" vertical-scroll-proportion="0.0">
+            <state line="164" column="13" selection-start="20230" selection-end="20230" vertical-scroll-proportion="-18.346153">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,7 +88,7 @@
       <file leaf-file-name="HelloServlet.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="70" selection-start="2472" selection-end="2472" vertical-scroll-proportion="0.69101125">
+            <state line="55" column="76" selection-start="3163" selection-end="3163" vertical-scroll-proportion="0.76404494">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,6 +123,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/util/Bag.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/Identity.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java" />
       </list>
@@ -355,7 +359,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sp" />
+              <option name="myItemId" value="saml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -395,6 +399,7 @@
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
@@ -408,6 +413,11 @@
     <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.salesforce.saml" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.SAMLValidator">
     <configuration default="false" name="AssertionValidator" type="Application" factoryName="Application" temporary="true">
@@ -733,7 +743,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/Identity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/Identity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="327" selection-end="327" vertical-scroll-proportion="0.4779874">
           <folding />
@@ -747,15 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="0" selection-start="18371" selection-end="18371" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="23" selection-start="646" selection-end="651" vertical-scroll-proportion="0.0">
@@ -763,9 +764,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="4" selection-start="378" selection-end="378" vertical-scroll-proportion="0.31448275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="13" selection-start="20230" selection-end="20230" vertical-scroll-proportion="-18.346153">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="70" selection-start="2472" selection-end="2472" vertical-scroll-proportion="0.69101125">
+        <state line="55" column="76" selection-start="3163" selection-end="3163" vertical-scroll-proportion="0.76404494">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

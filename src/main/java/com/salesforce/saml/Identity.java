@@ -1,4 +1,4 @@
-package com.salesforce.saml.sp;
+package com.salesforce.saml;
 
 import com.salesforce.util.Bag;
 

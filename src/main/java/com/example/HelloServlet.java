@@ -1,6 +1,6 @@
 package com.example;
 
-import com.salesforce.saml.sp.Identity;
+import com.salesforce.saml.Identity;
 import com.salesforce.saml.sp.SAMLValidator;
 
 import java.io.IOException;
@@ -51,7 +51,10 @@ public class HelloServlet extends HttpServlet {
         SAMLValidator sv = new SAMLValidator();
         try {
             Identity identity = sv.validate(encodedResponse, cert, "https://identity.prerelna1.pre.my.salesforce.com", "https://samlsp.herokuapp.com/hello", "https://samlsp.herokuapp.com/hello");
-            if (identity != null) out.write(identity.getSubject().getBytes("UTF-8"));
+            if (identity != null) {
+                out.write(identity.getSubject().getBytes("UTF-8"));
+                out.write(identity.attributes.toString().getBytes("UTF-8"));
+            }
         } catch (Exception e) {
             out.write(e.getMessage().getBytes());
         }
