@@ -157,11 +157,15 @@ public class SAMLValidator {
             identity = new Identity(nameIdNode.getTextContent());
 
             NodeList attributeXPathResult = (NodeList) attributeXPath.evaluate(responseDocument, XPathConstants.NODESET);
-            for(int i=0; i < attributeXPathResult.getLength(); i++){
-                Node childNode = attributeXPathResult.item(i);
-                String name = childNode.getAttributes().getNamedItem("Name").getTextContent();
-                String value = childNode.getFirstChild().getTextContent();
-                identity.attributes.put(name,value);
+            for(int i = 0; i < attributeXPathResult.getLength(); i++) {
+                Node attributeStatement = attributeXPathResult.item(i);
+                NodeList attributes = attributeStatement.getChildNodes();
+                for(int j = 0; j < attributes.getLength(); j++) {
+                    Node attribute = attributes.item(j);
+                    String name = attribute.getAttributes().getNamedItem("Name").getTextContent();
+                    String value = attribute.getFirstChild().getTextContent();
+                    identity.attributes.put(name,value);
+                }
             }
 
         } else {
