@@ -91,7 +91,7 @@ public class SAMLFilter implements Filter {
             }  else {
                 //we need to send the user to login
 
-                String[] args = new String[3];
+                String[] args = new String[5];
                 args[0] = "https://samlsp.herokuapp.com/_saml";
                 args[1] = "https://identity.prerelna1.pre.my.salesforce.com/idp/endpoint/HttpRedirect";
                 args[2] = new RandomGUID().toString();
@@ -101,11 +101,12 @@ public class SAMLFilter implements Filter {
                 html = new MessageFormat(requestTemplate);
                 String requestXml = html.format(args);
                 byte[] input = requestXml.getBytes("UTF-8");
-                byte[] output = new byte[1000];
+                byte[] output = new byte[10000];
                 Deflater compresser = new Deflater();
                 compresser.setInput(input);
                 compresser.finish();
                 int compressedDataLength = compresser.deflate(output);
+                System.out.println("LENGHT OF OUTPUT ------> " + compressedDataLength);
                 String encodedRequest = Base64.encodeBase64String(output);
                 String SAMLRequest = URLEncoder.encode(encodedRequest,"UTF-8");
 
