@@ -3,7 +3,7 @@
 <h2>SAML SP</h2>
 
 <%
-    Identity identity = (Identity) req.getSession().getAttribute("IDENTITY");
+    Identity identity = (Identity) session.getAttribute("IDENTITY");
 
     if (identity != null) {
         out.println(identity);
