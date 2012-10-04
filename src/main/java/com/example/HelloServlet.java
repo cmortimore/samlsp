@@ -1,6 +1,7 @@
 package com.example;
 
 import com.salesforce.saml.Identity;
+import com.salesforce.saml.SAMLException;
 import com.salesforce.saml.sp.SAMLValidator;
 
 import java.io.IOException;
@@ -57,7 +58,7 @@ public class HelloServlet extends HttpServlet {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            out.write(e.getMessage().getBytes());
+            throw new ServletException(e);
         }
         out.flush();
         out.close();

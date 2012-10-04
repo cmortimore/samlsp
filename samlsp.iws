@@ -64,7 +64,7 @@
       <file leaf-file-name="SAMLValidator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="13" selection-start="20230" selection-end="20230" vertical-scroll-proportion="-18.346153">
+            <state line="61" column="123" selection-start="13973" selection-end="13973" vertical-scroll-proportion="-8.846154">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,7 +84,7 @@
       <file leaf-file-name="HelloServlet.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="32" selection-start="3242" selection-end="3242" vertical-scroll-proportion="0.8146067">
+            <state line="60" column="0" selection-start="3285" selection-end="3285" vertical-scroll-proportion="0.83146065">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -769,7 +769,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="13" selection-start="20230" selection-end="20230" vertical-scroll-proportion="-18.346153">
+        <state line="61" column="123" selection-start="13973" selection-end="13973" vertical-scroll-proportion="-8.846154">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -778,7 +778,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="32" selection-start="3242" selection-end="3242" vertical-scroll-proportion="0.8146067">
+        <state line="60" column="0" selection-start="3285" selection-end="3285" vertical-scroll-proportion="0.83146065">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
