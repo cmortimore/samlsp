@@ -102,6 +102,10 @@ public class SAMLFilter implements Filter {
                 MessageFormat html;
                 html = new MessageFormat(requestTemplate);
                 String requestXml = html.format(args);
+
+                System.out.println("reqeustXML:" + requestXml );
+
+
                 byte[] input = requestXml.getBytes("UTF-8");
 
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -111,6 +115,10 @@ public class SAMLFilter implements Filter {
                 dout.close();
 
                 String encodedRequest = Base64.encodeBase64String(baos.toByteArray());
+
+                System.out.println("encodedRequest:" + encodedRequest );
+
+
                 String SAMLRequest = URLEncoder.encode(encodedRequest,"UTF-8");
                 System.out.println("SAMLRequest:" + SAMLRequest );
 

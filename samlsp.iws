@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82586c5a-cbf5-41fa-a37d-f3bfd9bdcea6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samlsp.iws" afterPath="$PROJECT_DIR$/samlsp.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java" />
     </list>
     <ignored path="samlsp.iws" />
@@ -74,7 +73,7 @@
       <file leaf-file-name="SAMLFilter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="98" selection-start="5675" selection-end="5675" vertical-scroll-proportion="0.6123595">
+            <state line="119" column="99" selection-start="5905" selection-end="5905" vertical-scroll-proportion="0.747191">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -783,7 +782,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="98" selection-start="5675" selection-end="5675" vertical-scroll-proportion="0.6123595">
+        <state line="119" column="99" selection-start="5905" selection-end="5905" vertical-scroll-proportion="0.747191">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
