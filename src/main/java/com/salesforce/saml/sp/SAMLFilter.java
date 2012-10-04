@@ -1,12 +1,18 @@
 package com.salesforce.saml.sp;
 
 import com.salesforce.saml.Identity;
+import com.salesforce.util.RandomGUID;
+import com.salesforce.util.XSDDateTime;
+import org.apache.commons.codec.binary.Base64;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.net.URLEncoder;
+import java.text.MessageFormat;
+import java.util.zip.Deflater;
 
 
 public class SAMLFilter implements Filter {
@@ -14,6 +20,8 @@ public class SAMLFilter implements Filter {
     private FilterConfig config = null;
 
     private static final String IDENTITY = "IDENTITY";
+
+    private static final String requestTemplate = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><samlp:AuthnRequest xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\" AssertionConsumerServiceURL=\"{0}\" Destination=\"{1}\" ID=\"_{2}\" IssueInstant=\"{3}\" ProtocolBinding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" Version=\"2.0\"><saml:Issuer xmlns:saml=\"urn:oasis:names:tc:SAML:2.0:assertion\">{4}</saml:Issuer></samlp:AuthnRequest>";
 
 
     private static String cert = "-----BEGIN CERTIFICATE-----\n" +
@@ -80,11 +88,28 @@ public class SAMLFilter implements Filter {
                 httpResponse.sendRedirect(relayState);
                 return;
 
-
-
             }  else {
                 //we need to send the user to login
-                httpResponse.sendRedirect("https://identity.prerelna1.pre.my.salesforce.com/idp/login?app=0spx00000004CB4&RelayState=" + httpRequest.getRequestURI());
+
+                String[] args = new String[3];
+                args[0] = "https://samlsp.herokuapp.com/_saml";
+                args[1] = "https://identity.prerelna1.pre.my.salesforce.com/idp/endpoint/HttpRedirect";
+                args[2] = new RandomGUID().toString();
+                args[3] = new XSDDateTime().getDateTime();
+                args[4] = "https://samlsp.herokuapp.com/";
+                MessageFormat html;
+                html = new MessageFormat(requestTemplate);
+                String requestXml = html.format(args);
+                byte[] input = requestXml.getBytes("UTF-8");
+                byte[] output = new byte[1000];
+                Deflater compresser = new Deflater();
+                compresser.setInput(input);
+                compresser.finish();
+                int compressedDataLength = compresser.deflate(output);
+                String encodedRequest = Base64.encodeBase64String(output);
+                String SAMLRequest = URLEncoder.encode(encodedRequest,"UTF-8");
+
+                httpResponse.sendRedirect("https://identity.prerelna1.pre.my.salesforce.com/idp/endpoint/HttpRedirect?SAMLRequest=" + SAMLRequest + "&RelayState=" + httpRequest.getRequestURI());
                 return;
             }
 

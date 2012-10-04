@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82586c5a-cbf5-41fa-a37d-f3bfd9bdcea6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/util/RandomGUID.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/util/XSDDateTime.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samlsp.iws" afterPath="$PROJECT_DIR$/samlsp.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
     </list>
     <ignored path="samlsp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,7 +78,7 @@
       <file leaf-file-name="SAMLFilter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="0" selection-start="4069" selection-end="4069" vertical-scroll-proportion="0.78089887">
+            <state line="107" column="0" selection-start="5513" selection-end="5513" vertical-scroll-proportion="0.747191">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,8 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/ParsedSignature.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/ParsedSignedInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SignedInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/CryptoUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/Reference.java" />
@@ -140,6 +140,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/salesforce/util/RandomGUID.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/salesforce/util/XSDDateTime.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java" />
       </list>
     </option>
@@ -863,9 +865,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/util/RandomGUID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.016551724">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/util/XSDDateTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.033103447">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="0" selection-start="4069" selection-end="4069" vertical-scroll-proportion="0.78089887">
+        <state line="107" column="0" selection-start="5513" selection-end="5513" vertical-scroll-proportion="0.747191">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
