@@ -58,6 +58,7 @@ public class SAMLFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
         HttpServletRequest httpRequest = (HttpServletRequest)request;
+        HttpServletResponse httpResponse = (HttpServletResponse)response;
         HttpSession session = httpRequest.getSession(true);
         Identity identity = (Identity)session.getAttribute(IDENTITY);
         if (identity == null) {
@@ -65,6 +66,8 @@ public class SAMLFilter implements Filter {
             if (httpRequest.getRequestURI().equals("/_saml")) {
 
                 String encodedResponse = httpRequest.getParameter("SAMLResponse");
+                String relayState = request.getParameter("RelayState");
+                if ((relayState == null) || ( relayState.equals(""))) relayState = "/";
 
                 SAMLValidator sv = new SAMLValidator();
                 try {
@@ -74,12 +77,14 @@ public class SAMLFilter implements Filter {
                     e.printStackTrace();
                     throw new ServletException(e);
                 }
+                httpResponse.sendRedirect(relayState);
+                return;
+
+
 
             }  else {
                 //we need to send the user to login
-                HttpServletResponse httpResponse = (HttpServletResponse)response;
-                //httpResponse.sendRedirect(authUrl + "&state=" + httpRequest.getRequestURI());
-                httpResponse.sendRedirect("https://identity.prerelna1.pre.my.salesforce.com/idp/login?app=0spx00000004CB4");
+                httpResponse.sendRedirect("https://identity.prerelna1.pre.my.salesforce.com/idp/login?app=0spx00000004CB4&RelayState=" + httpRequest.getRequestURI());
                 return;
             }
 
