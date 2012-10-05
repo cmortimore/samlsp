@@ -58,13 +58,12 @@ public class SAMLValidator {
         XPathExpression audienceXPath = xpath.compile("saml:Conditions/saml:AudienceRestriction/saml:Audience");
         XPathExpression attributeXPath = xpath.compile("/samlp:Response/saml:Assertion/saml:AttributeStatement");
 
-
-        //Get the Response node and fail if more than one
+        //Check the status
         NodeList statusXPathResult = (NodeList) statusXPath.evaluate(responseDocument, XPathConstants.NODESET);
         if (statusXPathResult.getLength() != 1) throw new SAMLException("No StatusCode");
         Node statusNode = statusXPathResult.item(0);
         String statusCode = statusNode.getAttributes().getNamedItem("Value").getTextContent();
-        if (!statusCode.equals("urn:oasis:names:tc:SAML:2.0:status:Success"))throw new SAMLException("IDP responsed with status of: " + statusCode);
+        if (!statusCode.equals("urn:oasis:names:tc:SAML:2.0:status:Success"))throw new SAMLException("IDP responded with status of: " + statusCode);
 
         //Get the Response node and fail if more than one
         NodeList responseXPathResult = (NodeList) responseXPath.evaluate(responseDocument, XPathConstants.NODESET);

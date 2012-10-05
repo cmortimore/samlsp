@@ -63,10 +63,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SAMLValidator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SAMLValidator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="0" selection-start="3467" selection-end="3467" vertical-scroll-proportion="0.38764045">
+            <state line="59" column="0" selection-start="2908" selection-end="2908" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -81,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SAMLFilter.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SAMLFilter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="6" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
+            <state line="92" column="84" selection-start="4161" selection-end="4161" vertical-scroll-proportion="0.747191">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,7 +95,7 @@
       <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="21" selection-start="2940" selection-end="2940" vertical-scroll-proportion="0.0">
+            <state line="22" column="30" selection-start="813" selection-end="819" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -128,9 +128,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/util/RandomGUID.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/util/XSDDateTime.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/Identity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java" />
       </list>
     </option>
   </component>
@@ -787,26 +787,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="0" selection-start="2908" selection-end="2908" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="21" selection-start="2940" selection-end="2940" vertical-scroll-proportion="0.0">
+        <state line="22" column="30" selection-start="813" selection-end="819" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="6" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
+        <state line="92" column="84" selection-start="4161" selection-end="4161" vertical-scroll-proportion="0.747191">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="0" selection-start="3467" selection-end="3467" vertical-scroll-proportion="0.38764045">
-          <folding />
         </state>
       </provider>
     </entry>
