@@ -25,7 +25,6 @@ public class SAMLFilter implements Filter {
 
     private static final String requestTemplate = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><samlp:AuthnRequest xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\" AssertionConsumerServiceURL=\"{0}\" Destination=\"{1}\" ID=\"_{2}\" IssueInstant=\"{3}\" ProtocolBinding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" Version=\"2.0\"><saml:Issuer xmlns:saml=\"urn:oasis:names:tc:SAML:2.0:assertion\">{4}</saml:Issuer></samlp:AuthnRequest>";
 
-
     private static String cert;
 
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -65,8 +64,8 @@ public class SAMLFilter implements Filter {
                 return;
 
             }  else {
-                //we need to send the user to login
 
+                //we need to send the user to login, and I'm lazy and don't want to write real XML.
                 String[] args = new String[5];
                 args[0] = "https://samlsp.herokuapp.com/_saml";
                 args[1] = "https://identity.prerelna1.pre.my.salesforce.com/idp/endpoint/HttpRedirect";
