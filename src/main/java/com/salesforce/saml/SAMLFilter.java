@@ -43,6 +43,7 @@ import javax.servlet.http.HttpSession;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URLEncoder;
 import java.security.PublicKey;
 import java.security.cert.Certificate;
@@ -108,8 +109,8 @@ public class SAMLFilter implements Filter {
                     identity = sv.validate(encodedResponse, publicKey, issuer, recipient, audience);
                     session.setAttribute(IDENTITY, identity);
                 } catch (Exception e) {
-                    e.printStackTrace();
-                    throw new ServletException(e);
+                    httpResponse.sendError(401, "Access Denied: " + e.getMessage());
+                    return;
                 }
                 httpResponse.sendRedirect(relayState);
                 return;
