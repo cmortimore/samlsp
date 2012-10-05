@@ -35,7 +35,6 @@ public class SAMLValidator {
 
         //Build the document
         String response = new String(Base64.decodeBase64(encodedResponse.getBytes("UTF-8")),"UTF-8");
-        System.out.println("Processing Assertion: " + response);
         DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
         domFactory.setNamespaceAware(true);
         DocumentBuilder builder = domFactory.newDocumentBuilder();

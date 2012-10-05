@@ -13,6 +13,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.text.MessageFormat;
+import java.util.UUID;
 import java.util.zip.Deflater;
 import java.util.zip.DeflaterOutputStream;
 
@@ -73,7 +74,7 @@ public class SAMLFilter implements Filter {
                 String[] args = new String[5];
                 args[0] = recipient;
                 args[1] = idpurl;
-                args[2] = new RandomGUID().toString();
+                args[2] = UUID.randomUUID().toString();
                 args[3] = new XSDDateTime().getDateTime();
                 args[4] = audience;
                 MessageFormat html;
