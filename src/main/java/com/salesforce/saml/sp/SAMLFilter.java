@@ -109,7 +109,7 @@ public class SAMLFilter implements Filter {
                 byte[] input = requestXml.getBytes("UTF-8");
 
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                Deflater d = new Deflater();
+                Deflater d = new Deflater(Deflater.DEFLATED, true);
                 DeflaterOutputStream dout = new DeflaterOutputStream(baos, d);
                 dout.write(input);
                 dout.close();

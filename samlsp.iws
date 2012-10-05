@@ -73,7 +73,7 @@
       <file leaf-file-name="SAMLFilter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="99" selection-start="5905" selection-end="5905" vertical-scroll-proportion="0.747191">
+            <state line="108" column="69" selection-start="5478" selection-end="5478" vertical-scroll-proportion="0.42696628">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -782,7 +782,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="99" selection-start="5905" selection-end="5905" vertical-scroll-proportion="0.747191">
+        <state line="108" column="69" selection-start="5478" selection-end="5478" vertical-scroll-proportion="0.42696628">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
