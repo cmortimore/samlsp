@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="82586c5a-cbf5-41fa-a37d-f3bfd9bdcea6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
     </list>
     <ignored path="samlsp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,7 +74,7 @@
       <file leaf-file-name="SAMLFilter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="69" selection-start="5478" selection-end="5478" vertical-scroll-proportion="0.42696628">
+            <state line="32" column="55" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.53932583">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,46 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XSDDateTime.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/util/XSDDateTime.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RandomGUID.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/util/RandomGUID.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="23" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Identity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/Identity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
+            <state line="30" column="73" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -151,10 +116,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/TestSAMLValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/util/RandomGUID.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/util/XSDDateTime.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java" />
       </list>
     </option>
@@ -343,6 +308,44 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="saml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="samlsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="samlsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="salesforce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="saml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -734,36 +737,9 @@
         <state line="39" column="45" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.6896552" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="4" selection-start="378" selection-end="378" vertical-scroll-proportion="0.31448275" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/TestSAMLValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="43" selection-start="12194" selection-end="12194" vertical-scroll-proportion="0.57758623" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="81" selection-start="3913" selection-end="3913" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/Identity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/util/RandomGUID.java">
@@ -775,14 +751,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/util/XSDDateTime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
+        <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.033103447">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.099310346">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/Identity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="324" selection-end="324" vertical-scroll-proportion="0.31448275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="4" selection-start="366" selection-end="366" vertical-scroll-proportion="0.31448275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="81" selection-start="3913" selection-end="3913" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="73" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="69" selection-start="5478" selection-end="5478" vertical-scroll-proportion="0.42696628">
+        <state line="32" column="55" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.53932583">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
