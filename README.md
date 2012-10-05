@@ -1,14 +1,4 @@
-# Embedded Jetty template application
+# Simple SAML 2 Java SP
 
-This is a template for a web application that uses embedded Jetty. The sample code consists of a JSP (this page) and a simple servlet.
-
-## Running the application locally
-
-First build with:
-
-    $mvn clean install
-
-Then run it with:
-
-    $java -cp target/classes:target/dependency/* com.example.Main
+A simple filter that allows a java app to act as a SAML Service Provider.
 

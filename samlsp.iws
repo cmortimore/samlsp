@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82586c5a-cbf5-41fa-a37d-f3bfd9bdcea6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/Identity.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/Identity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLException.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/util/Bag.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/util/Bag.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/util/XSDDateTime.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/util/XSDDateTime.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samlsp.iws" afterPath="$PROJECT_DIR$/samlsp.iws" />
     </list>
     <ignored path="samlsp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,59 +62,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SAMLException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLException.java">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="13" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SAMLFilter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="1694" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Identity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/Identity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="62" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SAMLValidator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLValidator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="13" selection-start="2559" selection-end="2559" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bag.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/util/Bag.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="41" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XSDDateTime.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/util/XSDDateTime.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="23" selection-start="1606" selection-end="1606" vertical-scroll-proportion="0.43034482">
+            <state line="3" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.049655173">
               <folding />
             </state>
           </provider>
@@ -138,7 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/AssertionValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/Identity.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/TestSAMLValidator.java" />
@@ -154,6 +100,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/Identity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/util/Bag.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -775,13 +722,6 @@
         <state line="39" column="45" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.6896552" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.099310346">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="30" selection-start="813" selection-end="819" vertical-scroll-proportion="0.36413792">
@@ -789,16 +729,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/Identity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="62" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
+        <state line="6" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.099310346">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/util/XSDDateTime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="13" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0">
+        <state line="23" column="140" selection-start="1457" selection-end="1457" vertical-scroll-proportion="0.38068965">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/util/Bag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="41" selection-start="170" selection-end="170" vertical-scroll-proportion="0.066206895">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="13" selection-start="2559" selection-end="2559" vertical-scroll-proportion="-2.005618">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/Identity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="62" selection-start="655" selection-end="655" vertical-scroll-proportion="0.19862069">
           <folding />
         </state>
       </provider>
@@ -812,25 +775,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLValidator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="13" selection-start="2559" selection-end="2559" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/util/Bag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="41" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
+        <state line="30" column="13" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.49655172">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/util/XSDDateTime.java">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="23" selection-start="1606" selection-end="1606" vertical-scroll-proportion="0.43034482">
+        <state line="3" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.049655173">
           <folding />
         </state>
       </provider>
