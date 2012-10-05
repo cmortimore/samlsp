@@ -47,6 +47,7 @@ public class SAMLValidator {
         XPath xpath = factory.newXPath();
         xpath.setNamespaceContext(namespaceContext);
         XPathExpression responseXPath = xpath.compile("/samlp:Response");
+        XPathExpression statusXPath = xpath.compile("/samlp:Response/samlp:Status/samlp:StatusCode");
         XPathExpression responseSignatureXPath = xpath.compile("/samlp:Response/ds:Signature");
         XPathExpression assertionXPath = xpath.compile("/samlp:Response/saml:Assertion");
         XPathExpression assertionSignatureXPath = xpath.compile("/samlp:Response/saml:Assertion/ds:Signature");
@@ -57,6 +58,13 @@ public class SAMLValidator {
         XPathExpression audienceXPath = xpath.compile("saml:Conditions/saml:AudienceRestriction/saml:Audience");
         XPathExpression attributeXPath = xpath.compile("/samlp:Response/saml:Assertion/saml:AttributeStatement");
 
+
+        //Get the Response node and fail if more than one
+        NodeList statusXPathResult = (NodeList) statusXPath.evaluate(responseDocument, XPathConstants.NODESET);
+        if (statusXPathResult.getLength() != 1) throw new SAMLException("No StatusCode");
+        Node statusNode = statusXPathResult.item(0);
+        String statusCode = statusNode.getAttributes().getNamedItem("Value").getTextContent();
+        if (!statusCode.equals("urn:oasis:names:tc:SAML:2.0:status:Success"))throw new SAMLException("IDP responsed with status of: " + statusCode);
 
         //Get the Response node and fail if more than one
         NodeList responseXPathResult = (NodeList) responseXPath.evaluate(responseDocument, XPathConstants.NODESET);

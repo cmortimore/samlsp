@@ -45,17 +45,21 @@ HUOfjYRru3Gqm5M4QFnRZRto5lLDWz6nfGMQ
 -----END CERTIFICATE-----</param-value>
         </init-param>
         <init-param>
-            <param-name>redirect_uri</param-name>
-            <param-value>https://localhost:8888/oauth/_callback</param-value>
+            <param-name>issuer</param-name>
+            <param-value>https://identity.prerelna1.pre.my.salesforce.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>recipient</param-name>
+            <param-value>https://samlsp.herokuapp.com/_saml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>audience</param-name>
+            <param-value>https://samlsp.herokuapp.com/</param-value>
         </init-param>
     </filter>
-
-
     <filter-mapping>
         <filter-name>SAMLFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-
-
 
 </web-app>

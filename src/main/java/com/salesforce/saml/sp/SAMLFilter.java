@@ -19,19 +19,21 @@ import java.util.zip.DeflaterOutputStream;
 
 public class SAMLFilter implements Filter {
 
-    private FilterConfig config = null;
-
     private static final String IDENTITY = "IDENTITY";
-
     private static final String requestTemplate = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><samlp:AuthnRequest xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\" AssertionConsumerServiceURL=\"{0}\" Destination=\"{1}\" ID=\"_{2}\" IssueInstant=\"{3}\" ProtocolBinding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" Version=\"2.0\"><saml:Issuer xmlns:saml=\"urn:oasis:names:tc:SAML:2.0:assertion\">{4}</saml:Issuer></samlp:AuthnRequest>";
 
+    private FilterConfig config;
     private static String cert;
+    private static String issuer;
+    private static String recipient;
+    private static String audience;
 
     public void init(FilterConfig filterConfig) throws ServletException {
         config = filterConfig;
         cert = config.getInitParameter("cert");
-
-
+        issuer = config.getInitParameter("issuer");
+        recipient = config.getInitParameter("recipient");
+        audience = config.getInitParameter("audience");
     }
 
     public void destroy() {
@@ -54,7 +56,7 @@ public class SAMLFilter implements Filter {
 
                 SAMLValidator sv = new SAMLValidator();
                 try {
-                    identity = sv.validate(encodedResponse, cert, "https://identity.prerelna1.pre.my.salesforce.com", "https://samlsp.herokuapp.com/_saml", "https://samlsp.herokuapp.com/");
+                    identity = sv.validate(encodedResponse, cert, issuer, recipient, audience);
                     session.setAttribute(IDENTITY, identity);
                 } catch (Exception e) {
                     e.printStackTrace();
