@@ -1,7 +1,39 @@
+/*
+ * Copyright (c) 2012, Salesforce.com
+ * All rights reserved.
+ *
+ * Derived from
+ * Copyright (c) 2009, Chuck Mortimore
+ * All rights reserved.
+ *
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ *     * Redistributions of source code must retain the above copyright
+ *       notice, this list of conditions and the following disclaimer.
+ *     * Redistributions in binary form must reproduce the above copyright
+ *       notice, this list of conditions and the following disclaimer in the
+ *       documentation and/or other materials provided with the distribution.
+ *     * Neither the names salesforce, salesforce.com xmldap, xmldap.org, nor the
+ *       names of its contributors may be used to endorse or promote products
+ *       derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE REGENTS AND CONTRIBUTORS BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+
 package com.salesforce.saml;
 
-import com.salesforce.saml.Identity;
-import com.salesforce.saml.SAMLException;
 import org.apache.commons.codec.binary.Base64;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -16,11 +48,12 @@ import javax.xml.crypto.dsig.dom.DOMValidateContext;
 import javax.xml.namespace.NamespaceContext;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.xpath.*;
-import java.io.*;
-
-import java.security.cert.CertificateFactory;
-import java.security.cert.Certificate;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathFactory;
+import java.io.ByteArrayInputStream;
+import java.security.PublicKey;
 import java.util.Calendar;
 import java.util.Iterator;
 import java.util.List;
@@ -28,7 +61,7 @@ import java.util.List;
 
 public class SAMLValidator {
 
-    public Identity validate(String encodedResponse, String cert, String issuer, String recipient, String audience) throws Exception {
+    public Identity validate(String encodedResponse,  PublicKey publicKey, String issuer, String recipient, String audience) throws Exception {
 
         Identity identity = null;
         boolean isValid = false;
@@ -86,7 +119,7 @@ public class SAMLValidator {
             //Check the response signature
             String responseId = responseNode.getAttributes().getNamedItem("ID").getTextContent();
             Node signature = responseXPathSignatureResult.item(0);
-            isValid = validateSignature(signature, responseId, cert);
+            isValid = validateSignature(signature, responseId, publicKey);
 
         } else {
 
@@ -97,7 +130,7 @@ public class SAMLValidator {
             } else if (assertionSignatureXPathResult.getLength() ==1 ) {
                 String assertionId = assertionNode.getAttributes().getNamedItem("ID").getTextContent();
                 Node signature = assertionSignatureXPathResult.item(0);
-                isValid = validateSignature(signature, assertionId, cert);
+                isValid = validateSignature(signature, assertionId, publicKey);
             } else throw new SAMLException("No Signature");
 
         }
@@ -154,14 +187,9 @@ public class SAMLValidator {
         
     }
 
-    private boolean validateSignature(Node signature, String id, String cert) throws Exception {
+    private boolean validateSignature(Node signature, String id, PublicKey publicKey) throws Exception {
 
-        //parse PEM
-        CertificateFactory cf = CertificateFactory.getInstance("X.509");
-        Certificate certificate = cf.generateCertificate(new ByteArrayInputStream(cert.getBytes("UTF-8")));
-
-
-        DOMValidateContext valContext = new DOMValidateContext (certificate.getPublicKey(), signature);
+        DOMValidateContext valContext = new DOMValidateContext (publicKey, signature);
         XMLSignatureFactory xsf = XMLSignatureFactory.getInstance("DOM");
         XMLSignature xs = xsf.unmarshalXMLSignature(valContext);
 

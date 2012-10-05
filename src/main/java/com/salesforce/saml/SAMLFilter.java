@@ -1,3 +1,36 @@
+/*
+ * Copyright (c) 2012, Salesforce.com
+ * All rights reserved.
+ *
+ * Derived from
+ * Copyright (c) 2009, Chuck Mortimore
+ * All rights reserved.
+ *
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ *     * Redistributions of source code must retain the above copyright
+ *       notice, this list of conditions and the following disclaimer.
+ *     * Redistributions in binary form must reproduce the above copyright
+ *       notice, this list of conditions and the following disclaimer in the
+ *       documentation and/or other materials provided with the distribution.
+ *     * Neither the names salesforce, salesforce.com xmldap, xmldap.org, nor the
+ *       names of its contributors may be used to endorse or promote products
+ *       derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE REGENTS AND CONTRIBUTORS BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
 package com.salesforce.saml;
 
 import com.salesforce.util.XSDDateTime;
@@ -7,9 +40,13 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.URLEncoder;
+import java.security.PublicKey;
+import java.security.cert.Certificate;
+import java.security.cert.CertificateFactory;
 import java.text.MessageFormat;
 import java.util.UUID;
 import java.util.zip.Deflater;
@@ -24,7 +61,7 @@ public class SAMLFilter implements Filter {
     private FilterConfig config;
     private static String issuer;
     private static String idpurl;
-    private static String cert;
+    private static PublicKey publicKey;
     private static String recipient;
     private static String audience;
 
@@ -32,9 +69,17 @@ public class SAMLFilter implements Filter {
         config = filterConfig;
         issuer = config.getInitParameter("issuer");
         idpurl = config.getInitParameter("idpurl");
-        cert = config.getInitParameter("cert");
         recipient = config.getInitParameter("recipient");
         audience = config.getInitParameter("audience");
+        String cert = config.getInitParameter("cert");
+        try {
+            CertificateFactory cf = CertificateFactory.getInstance("X.509");
+            Certificate certificate = cf.generateCertificate(new ByteArrayInputStream(cert.getBytes("UTF-8")));
+            publicKey = certificate.getPublicKey();
+        } catch (Exception e) {
+            throw new ServletException("Error getting PublicKey from Cert", e);
+        }
+
     }
 
     public void destroy() {
@@ -49,15 +94,18 @@ public class SAMLFilter implements Filter {
         Identity identity = (Identity)session.getAttribute(IDENTITY);
         if (identity == null) {
 
+            //see if this is a SAML Message
             if (httpRequest.getRequestURI().equals("/_saml")) {
 
+                //Get the request and relaystate
                 String encodedResponse = httpRequest.getParameter("SAMLResponse");
                 String relayState = request.getParameter("RelayState");
                 if ((relayState == null) || ( relayState.equals(""))) relayState = "/";
 
+                //validate the response
                 SAMLValidator sv = new SAMLValidator();
                 try {
-                    identity = sv.validate(encodedResponse, cert, issuer, recipient, audience);
+                    identity = sv.validate(encodedResponse, publicKey, issuer, recipient, audience);
                     session.setAttribute(IDENTITY, identity);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -68,7 +116,7 @@ public class SAMLFilter implements Filter {
 
             }  else {
 
-                //we need to send the user to login, and I'm lazy and don't want to write real XML.
+                //Lazy version of building a SAML Request...
                 String[] args = new String[5];
                 args[0] = recipient;
                 args[1] = idpurl;
@@ -79,13 +127,21 @@ public class SAMLFilter implements Filter {
                 html = new MessageFormat(requestTemplate);
                 String requestXml = html.format(args);
                 byte[] input = requestXml.getBytes("UTF-8");
+
+                //Deflate
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
                 Deflater d = new Deflater(Deflater.DEFLATED, true);
                 DeflaterOutputStream dout = new DeflaterOutputStream(baos, d);
                 dout.write(input);
                 dout.close();
+
+                //B64
                 String encodedRequest = Base64.encodeBase64String(baos.toByteArray());
+
+                //URLEncode
                 String SAMLRequest = URLEncoder.encode(encodedRequest,"UTF-8");
+
+                //Redirect
                 httpResponse.sendRedirect(idpurl + "?SAMLRequest=" + SAMLRequest + "&RelayState=" + httpRequest.getRequestURI());
                 return;
             }
