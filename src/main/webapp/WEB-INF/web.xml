@@ -13,7 +13,7 @@
     <filter>
         <filter-name>SAMLFilter</filter-name>
         <filter-class>
-            com.salesforce.saml.sp.SAMLFilter
+            com.salesforce.saml.SAMLFilter
         </filter-class>
         <init-param>
             <param-name>issuer</param-name>
