@@ -1,7 +1,6 @@
 package com.salesforce.saml.sp;
 
 import com.salesforce.saml.Identity;
-import com.salesforce.util.RandomGUID;
 import com.salesforce.util.XSDDateTime;
 import org.apache.commons.codec.binary.Base64;
 
