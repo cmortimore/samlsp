@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82586c5a-cbf5-41fa-a37d-f3bfd9bdcea6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samlsp.iws" afterPath="$PROJECT_DIR$/samlsp.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
     </list>
     <ignored path="samlsp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,19 +61,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SAMLFilter.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SAMLFilter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="63" selection-start="4588" selection-end="4588" vertical-scroll-proportion="0.0">
+            <state line="148" column="0" selection-start="6600" selection-end="6600" vertical-scroll-proportion="0.66292137">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="0" selection-start="3137" selection-end="3137" vertical-scroll-proportion="0.8110345">
+            <state line="61" column="22" selection-start="2997" selection-end="3136" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,8 +107,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/Identity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/util/Bag.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java" />
       </list>
     </option>
   </component>
@@ -687,16 +685,16 @@
         <state line="4" column="0" selection-start="193" selection-end="193" vertical-scroll-proportion="0.06741573" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="63" selection-start="4588" selection-end="4588" vertical-scroll-proportion="0.0">
+        <state line="61" column="22" selection-start="2997" selection-end="3136" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="3137" selection-end="3137" vertical-scroll-proportion="0.8110345">
+        <state line="148" column="0" selection-start="6600" selection-end="6600" vertical-scroll-proportion="0.66292137">
           <folding />
         </state>
       </provider>

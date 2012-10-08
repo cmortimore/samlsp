@@ -145,8 +145,10 @@ public class SAMLFilter implements Filter {
                 String SAMLRequest = URLEncoder.encode(encodedRequest,"UTF-8");
 
                 //Redirect
-                String rs = URLEncoder.encode(httpRequest.getRequestURI() + "?" +  httpRequest.getQueryString(),"UTF-8");;
-                httpResponse.sendRedirect(idpurl + "?SAMLRequest=" + SAMLRequest + "&RelayState=" + rs);
+                String rs = httpRequest.getRequestURI();
+                String qs = httpRequest.getQueryString();
+                if ((qs != null) && (!qs.equals(""))) rs += "?" +  qs;
+                httpResponse.sendRedirect(idpurl + "?SAMLRequest=" + SAMLRequest + "&RelayState=" + URLEncoder.encode(rs,"UTF-8"));
                 return;
             }
 
