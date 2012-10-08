@@ -4,6 +4,7 @@
     <list default="true" id="82586c5a-cbf5-41fa-a37d-f3bfd9bdcea6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samlsp.iws" afterPath="$PROJECT_DIR$/samlsp.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
     </list>
     <ignored path="samlsp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,10 +63,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SAMLFilter.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SAMLFilter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="0" selection-start="5213" selection-end="5213" vertical-scroll-proportion="0.4775281">
+            <state line="100" column="63" selection-start="4588" selection-end="4588" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="0" selection-start="3137" selection-end="3137" vertical-scroll-proportion="0.8110345">
               <folding />
             </state>
           </provider>
@@ -91,7 +101,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/HelloServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/util/RandomGUID.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/sp/SAMLFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/util/XSDDateTime.java" />
@@ -101,6 +110,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/util/Bag.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -186,9 +196,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Favorites" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -265,15 +272,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="salesforce" />
+              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -287,58 +290,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="salesforce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="saml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="samlsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="samlsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
+              <option name="myItemId" value="packager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Favorites" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -355,9 +315,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -692,11 +652,6 @@
         <state line="39" column="45" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.6896552" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="30" selection-start="813" selection-end="819" vertical-scroll-proportion="0.36413792" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.099310346" />
@@ -724,21 +679,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="13" selection-start="2559" selection-end="2572" vertical-scroll-proportion="-1.6685393">
-          <folding />
-        </state>
+        <state line="61" column="13" selection-start="2559" selection-end="2572" vertical-scroll-proportion="-1.6685393" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="193" selection-end="193" vertical-scroll-proportion="0.06741573">
-          <folding />
-        </state>
+        <state line="4" column="0" selection-start="193" selection-end="193" vertical-scroll-proportion="0.06741573" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="0" selection-start="5213" selection-end="5213" vertical-scroll-proportion="0.4775281">
+        <state line="100" column="63" selection-start="4588" selection-end="4588" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="0" selection-start="3137" selection-end="3137" vertical-scroll-proportion="0.8110345">
           <folding />
         </state>
       </provider>

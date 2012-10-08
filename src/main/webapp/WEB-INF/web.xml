@@ -60,7 +60,10 @@ HUOfjYRru3Gqm5M4QFnRZRto5lLDWz6nfGMQ
             <param-name>audience</param-name>
             <param-value>https://samlsp.herokuapp.com/</param-value>
         </init-param>
-
+        <init-param>
+            <param-name>samlendpoint</param-name>
+            <param-value>/_saml</param-value>
+        </init-param>
     </filter>
     <filter-mapping>
         <filter-name>SAMLFilter</filter-name>

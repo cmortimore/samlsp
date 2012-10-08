@@ -65,6 +65,7 @@ public class SAMLFilter implements Filter {
     private static PublicKey publicKey;
     private static String recipient;
     private static String audience;
+    private static String samlendpoint;
 
     public void init(FilterConfig filterConfig) throws ServletException {
         config = filterConfig;
@@ -72,6 +73,7 @@ public class SAMLFilter implements Filter {
         idpurl = config.getInitParameter("idpurl");
         recipient = config.getInitParameter("recipient");
         audience = config.getInitParameter("audience");
+        samlendpoint = config.getInitParameter("samlendpoint");
         String cert = config.getInitParameter("cert");
         try {
             CertificateFactory cf = CertificateFactory.getInstance("X.509");
@@ -96,7 +98,7 @@ public class SAMLFilter implements Filter {
         if (identity == null) {
 
             //see if this is a SAML Message
-            if (httpRequest.getRequestURI().equals("/_saml")) {
+            if (httpRequest.getRequestURI().equals(samlendpoint)) {
 
                 //Get the request and relaystate
                 String encodedResponse = httpRequest.getParameter("SAMLResponse");
