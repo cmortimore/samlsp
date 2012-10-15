@@ -63,6 +63,7 @@ public class SAMLFilter implements Filter {
     private static String issuer;
     private static String idpurl;
     private static PublicKey publicKey;
+    private static PublicKey secondaryPublicKey;
     private static String recipient;
     private static String audience;
     private static String samlendpoint;
@@ -74,6 +75,7 @@ public class SAMLFilter implements Filter {
         recipient = config.getInitParameter("recipient");
         audience = config.getInitParameter("audience");
         samlendpoint = config.getInitParameter("samlendpoint");
+
         String cert = config.getInitParameter("cert");
         try {
             CertificateFactory cf = CertificateFactory.getInstance("X.509");
@@ -81,6 +83,18 @@ public class SAMLFilter implements Filter {
             publicKey = certificate.getPublicKey();
         } catch (Exception e) {
             throw new ServletException("Error getting PublicKey from Cert", e);
+        }
+
+
+        String cert2 = config.getInitParameter("cert2");
+        if (cert2 != null) {
+            try {
+                CertificateFactory cf = CertificateFactory.getInstance("X.509");
+                Certificate certificate = cf.generateCertificate(new ByteArrayInputStream(cert.getBytes("UTF-8")));
+                secondaryPublicKey = certificate.getPublicKey();
+            } catch (Exception e) {
+                throw new ServletException("Error getting PublicKey from Cert 2", e);
+            }
         }
 
     }
@@ -108,7 +122,7 @@ public class SAMLFilter implements Filter {
                 //validate the response
                 SAMLValidator sv = new SAMLValidator();
                 try {
-                    identity = sv.validate(encodedResponse, publicKey, issuer, recipient, audience);
+                    identity = sv.validate(encodedResponse, publicKey, secondaryPublicKey, issuer, recipient, audience);
                     session.setAttribute(IDENTITY, identity);
                 } catch (Exception e) {
                     httpResponse.sendError(401, "Access Denied: " + e.getMessage());
