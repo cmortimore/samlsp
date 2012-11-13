@@ -64,9 +64,10 @@ public class SAMLFilter implements Filter {
     private static String idpurl;
     private static PublicKey publicKey;
     private static PublicKey secondaryPublicKey;
-    private static String recipient;
-    private static String audience;
     private static String samlendpoint;
+    // the following variables must not be static to allow different values per instance
+    private String recipient;
+    private String audience;
 
     public void init(FilterConfig filterConfig) throws ServletException {
         config = filterConfig;
