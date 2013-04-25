@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82586c5a-cbf5-41fa-a37d-f3bfd9bdcea6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/InvalidSignatureException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samlsp.iws" afterPath="$PROJECT_DIR$/samlsp.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
     </list>
     <ignored path="samlsp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,55 +58,6 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="samlsp" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="SAMLFilter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="71" selection-start="5640" selection-end="5640" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SAMLValidator.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLValidator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="170" column="28" selection-start="8444" selection-end="8444" vertical-scroll-proportion="2.4438202">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InvalidSignatureException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/InvalidSignatureException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SAMLException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="50" selection-start="1665" selection-end="1683" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="29" selection-start="2361" selection-end="2366" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -372,9 +319,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -634,8 +581,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="874" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1024" height="742" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -645,7 +592,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14090583" sideWeight="0.6710875" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19985622" sideWeight="0.6710875" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -734,39 +681,29 @@
         <state line="4" column="0" selection-start="193" selection-end="193" vertical-scroll-proportion="0.06741573" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="71" selection-start="5640" selection-end="5640" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="29" selection-start="2361" selection-end="2366" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="47" column="29" selection-start="2361" selection-end="2366" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="50" selection-start="1665" selection-end="1683" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="30" column="50" selection-start="1665" selection-end="1683" vertical-scroll-proportion="0.49655172" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/InvalidSignatureException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="71" selection-start="5640" selection-end="5640" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.016551724" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salesforce/saml/SAMLValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="28" selection-start="8444" selection-end="8444" vertical-scroll-proportion="2.4438202">
-          <folding />
-        </state>
+        <state line="170" column="28" selection-start="8444" selection-end="8444" vertical-scroll-proportion="2.4438202" />
       </provider>
     </entry>
   </component>

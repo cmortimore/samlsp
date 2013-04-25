@@ -17,61 +17,45 @@
         </filter-class>
         <init-param>
             <param-name>issuer</param-name>
-            <param-value>https://identity.prerelna1.pre.my.salesforce.com</param-value>
+            <param-value>https://eptestidp-dev-ed.my.salesforce.com</param-value>
         </init-param>
         <init-param>
             <param-name>idpurl</param-name>
-            <param-value>https://identity.prerelna1.pre.my.salesforce.com/idp/endpoint/HttpRedirect</param-value>
+            <param-value>https://eptestidp-dev-ed.my.salesforce.com/idp/endpoint/HttpRedirect</param-value>
         </init-param>
         <init-param>
             <param-name>cert</param-name>
             <param-value>-----BEGIN CERTIFICATE-----
-MIIDXTCCAkUCBEXjN8cwDQYJKoZIhvcNAQEEBQAwczELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNh
-bGlmb3JuaWExFjAUBgNVBAcTDVNhbiBGcmFuY2lzY28xETAPBgNVBAoTCEN1c3RvbWVyMQ0wCwYD
-VQQLEwRTQU1MMRUwEwYDVQQDEwxzYW1sdGVzdC5jb20wHhcNMDcwMjI2MTk0MDU1WhcNMDcwNTI3
-MTk0MDU1WjBzMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2Fu
-IEZyYW5jaXNjbzERMA8GA1UEChMIQ3VzdG9tZXIxDTALBgNVBAsTBFNBTUwxFTATBgNVBAMTDHNh
-bWx0ZXN0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALg5rV4sirtEemLzttBM
-l5iI5xduZMBlfHr5tvcznN1WUqtm7U/qmEvb10e/e5eL2ZB9x+5Ex+SFfdqOpKWVtMRsLk5Edsly
-YQ48hvJBtjvMFI7PEOD65r40Vhl2O02kDI00cuKH/2M/werzQnw2DTdqGarEooP1IMcP44BaFz/F
-7pmQLtBgVrNp1XoDvO0s2AMZUbbbMQntNdJqlGThpyCorjz8wzvn/hwEI6acaF9s63+pKavbqDB9
-DK+aT/TO7WRuK0kyPNHD4N60fn5E0W2TGVxsmTKGj5qHM2LTdHyQvsaLQdyonDCaL4IfSXCPfunD
-w0+q9csE7XH5S4Eh3d0CAwEAATANBgkqhkiG9w0BAQQFAAOCAQEARK7gAjIEE6rCT9ycNLhCX6Cz
-61dRM0RQikIpMDVGWF6XgBtZCzY4etJmdXTfOsBBnzHQ8pDEhqZALJ7gPxFYnEIjtvnTiOwuwjmh
-aYlqEATO4qvUACWvr2JeWKK+8g1HZmHsjt5+NdxBbJJoUzhfmInqz4Kr6cWAsOrp+/WaYYmhMbgu
-Vce5JLAxKPwvj8i0HKDYvPXGq308nrwhKnswa9fD2oXzgeGpl5UdaEA13CD6BLfqhDxc0copovyO
-qYkKNGgDCtBwvPpFtWqPRiIbMgYHPkpnwD/0jyKVOLDylL03Sz18yMyqiol7ECy2FwyKyaOOvBrx
-q03cOvhwNXylVA==
------END CERTIFICATE-----</param-value>
+MIIEcjCCA1qgAwIBAgIOAT497rOdAAAAAC++fYIwDQYJKoZIhvcNAQEFBQAwfjEW
+MBQGA1UEAwwNU2FsZXNmb3JjZWNvbTEYMBYGA1UECwwPMDBEaTAwMDAwMDBLeDRv
+MRcwFQYDVQQKDA5TYWxlc2ZvcmNlLmNvbTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNj
+bzELMAkGA1UECAwCQ0ExDDAKBgNVBAYTA1VTQTAeFw0xMzA0MjQyMTI0MTNaFw0x
+NTA0MjQyMTI0MTNaMH4xFjAUBgNVBAMMDVNhbGVzZm9yY2Vjb20xGDAWBgNVBAsM
+DzAwRGkwMDAwMDAwS3g0bzEXMBUGA1UECgwOU2FsZXNmb3JjZS5jb20xFjAUBgNV
+BAcMDVNhbiBGcmFuY2lzY28xCzAJBgNVBAgMAkNBMQwwCgYDVQQGEwNVU0EwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC5haZ5nsv65jNxBPcJLB1TYLwC
+sBRV7nLt6gJbYfoqZUddVNzvD3d2x3YcLP/R+s2ev6DRk0WVSy5Xqa0c/wpIrIWz
+Gnve+Nd+yTkwdf067mEsqbJGUP2oIQe27jOWkmoOwr4WvPUQ+krqY+U8mawYTkbv
+4jO8KMljPbaiQ9MfsjKbjdNoYY2VRlscVr9Kzk/ZzsToqdGmisPH4JzcXUFA1GsH
+SKKQbJ9/NDZ9aKokUKrbR+Vgfnv4x/v9GfCTZ76n5fAHOupvbdPaTBrR8sRtdiQJ
+2Rm99DrL9cbw12Fd8xnHkZQf5rKgBcXR95M5hT+z8+zxpz18HG+o7iHwlsmpAgMB
+AAGjge0wgeowHQYDVR0OBBYEFDM5A0K8VRx/mT5ZQwVDKGM2i/ThMIG3BgNVHSME
+ga8wgayAFDM5A0K8VRx/mT5ZQwVDKGM2i/ThoYGDpIGAMH4xFjAUBgNVBAMMDVNh
+bGVzZm9yY2Vjb20xGDAWBgNVBAsMDzAwRGkwMDAwMDAwS3g0bzEXMBUGA1UECgwO
+U2FsZXNmb3JjZS5jb20xFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xCzAJBgNVBAgM
+AkNBMQwwCgYDVQQGEwNVU0GCDgE+Pe6zoAAAAAAvvn2CMA8GA1UdEwEB/wQFMAMB
+Af8wDQYJKoZIhvcNAQEFBQADggEBAHy64JV5zb5QLmHh9O06JqNk4TmGOGpcr400
+aJ/nBcb1lczLqXk+ErRZLdfUNvQ5TQO9Hmh7qXzt4f/BtBOK6FI0BqxCLj2k6wyq
+Nr+aDSb/NGYjdvH5HBOgY2tVXg1hZxCYeW8Er2tQ3wIxfggthug3K+7LXVd+idqg
+DEHoJ1NNuGW4p+iXfsffmslaAs7/brNkczsBY0aRd90x4vzmOs3DHyR77BYdOCYF
+mjta5xWzUTBht7LYHlTF6Vl+k57eBYWVzD3fTJZXuGXzBf49gnVabMlVe2bKYW74
+3AjIq0wzxXvcBG4BzZSO4nsi2nP9dQKLxA/iK4/4/K4OgHORSXc=
+-----END CERTIFICATE-----
+</param-value>
         </init-param>
         <init-param>
             <param-name>cert2</param-name>
-            <param-value>-----BEGIN CERTIFICATE-----
-MIIEZzCCA0+gAwIBAgIOATmUyEXBAAAAAHD3/AswDQYJKoZIhvcNAQEFBQAwezET
-MBEGA1UEAwwKTXkgQ29tcGFueTEYMBYGA1UECwwPMDBEeDAwMDAwMDA5VlFtMRcw
-FQYDVQQKDA5TYWxlc2ZvcmNlLmNvbTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzEL
-MAkGA1UECAwCQ0ExDDAKBgNVBAYTA1VTQTAeFw0xMjA5MDUwNDU1MTZaFw0xNDA5
-MDUwNDU1MTZaMHsxEzARBgNVBAMMCk15IENvbXBhbnkxGDAWBgNVBAsMDzAwRHgw
-MDAwMDAwOVZRbTEXMBUGA1UECgwOU2FsZXNmb3JjZS5jb20xFjAUBgNVBAcMDVNh
-biBGcmFuY2lzY28xCzAJBgNVBAgMAkNBMQwwCgYDVQQGEwNVU0EwggEiMA0GCSqG
-SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCXwDWO73cu3rHisGl3aQ60ZyGBQRkw5NDT
-D8b73fqb0oA16tfF7YrDYZsUXC31rE6AmPHHPLPaNTShVF9ZpQ8w2dO9QM0W0ZD1
-JWLYPITtmWIRs9/nvUhjoirwvJt3eypvcC31OFIjylH/7HFEprOUD3BjW9qT/yp8
-SamPGx2YpgWni6S8cIoAqr+uPUtEK2F6VX/Aye/WsgEo2x6y93hUy53gflFL+Xl3
-9uGssCUAjcwtiMreZS2Ph4ZknGnWMWjPsPAXOdoQ0Yi0c6FUXwqfTqBADLwRRUxr
-X9hMcWYO/eo2SWGdS+T2/7CtN1u4sSXEjUroup50gp0/784fh+AbAgMBAAGjgegw
-geUwHQYDVR0OBBYEFI4QaUhc99/m46kEW0E8ZyykSjSSMIGyBgNVHSMEgaowgaeA
-FI4QaUhc99/m46kEW0E8ZyykSjSSoX+kfTB7MRMwEQYDVQQDDApNeSBDb21wYW55
-MRgwFgYDVQQLDA8wMER4MDAwMDAwMDlWUW0xFzAVBgNVBAoMDlNhbGVzZm9yY2Uu
-Y29tMRYwFAYDVQQHDA1TYW4gRnJhbmNpc2NvMQswCQYDVQQIDAJDQTEMMAoGA1UE
-BhMDVVNBgg4BOZTIRcMAAAAAcPf8CzAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3
-DQEBBQUAA4IBAQA0JS456PwGdIKakhcVuL4xARwRLuonAvcdPdyL6NjkxrouZW7e
-Qss1LdqKGUyv6zJxJWqWrHG/TE8FlR3KJRuled/WEVAXFfjpFTO40yiNDs4U6ih9
-PTeS6ke/rVvM6QUO6Tvdjdn6HIMb+EIb3ByuAknaoEDwxzy+6fEshMRtiPg8mP+X
-rnjrAZkH0DF65WTLMcnU6pFBmaNOweTVoJ2GGrZ7yL3Ss3D7gSLDdPbEoID1xZ42
-3EJaxSr96di3EZqSIGZITS90izrLd66lcoStMiE0zF/wTe5qVSZb4AK+aGCZ9u5q
-HUOfjYRru3Gqm5M4QFnRZRto5lLDWz6nfGMQ
------END CERTIFICATE-----</param-value>
+            <param-value></param-value>
         </init-param>
         <init-param>
             <param-name>recipient</param-name>
@@ -79,7 +63,7 @@ HUOfjYRru3Gqm5M4QFnRZRto5lLDWz6nfGMQ
         </init-param>
         <init-param>
             <param-name>audience</param-name>
-            <param-value>https://samlsp.herokuapp.com/</param-value>
+            <param-value>www.salesforce.com</param-value>
         </init-param>
         <init-param>
             <param-name>samlendpoint</param-name>
