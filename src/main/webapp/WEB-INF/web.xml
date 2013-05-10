@@ -17,7 +17,7 @@
         </filter-class>
         <init-param>
             <param-name>issuer</param-name>
-            <param-value>https://cmort.blitz03.blitz.salesforce.com</param-value>
+            <param-value>https://cmort.blitz01.blitz.salesforce.com</param-value>
         </init-param>
         <init-param>
             <param-name>idpurl</param-name>

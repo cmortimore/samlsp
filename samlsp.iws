@@ -64,7 +64,7 @@
       <file leaf-file-name="web.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="59" selection-start="3061" selection-end="3061" vertical-scroll-proportion="0.6742857">
+            <state line="19" column="67" selection-start="722" selection-end="722" vertical-scroll-proportion="0.3257143">
               <folding />
             </state>
           </provider>
@@ -706,7 +706,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="59" selection-start="3061" selection-end="3061" vertical-scroll-proportion="0.6742857">
+        <state line="19" column="67" selection-start="722" selection-end="722" vertical-scroll-proportion="0.3257143">
           <folding />
         </state>
       </provider>
