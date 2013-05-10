@@ -17,39 +17,39 @@
         </filter-class>
         <init-param>
             <param-name>issuer</param-name>
-            <param-value>https://eptestidp-dev-ed.my.salesforce.com</param-value>
+            <param-value>https://cmort.blitz03.blitz.salesforce.com</param-value>
         </init-param>
         <init-param>
             <param-name>idpurl</param-name>
-            <param-value>https://epdemoidp-developer-edition.na15.force.com/idp/endpoint/HttpRedirect</param-value>
+            <param-value>https://cmort.blitz03.blitz.salesforce.com/idp/endpoint/HttpRedirect</param-value>
         </init-param>
         <init-param>
             <param-name>cert</param-name>
             <param-value>-----BEGIN CERTIFICATE-----
-MIIEcjCCA1qgAwIBAgIOAT497rOdAAAAAC++fYIwDQYJKoZIhvcNAQEFBQAwfjEW
-MBQGA1UEAwwNU2FsZXNmb3JjZWNvbTEYMBYGA1UECwwPMDBEaTAwMDAwMDBLeDRv
+MIIEWDCCA0CgAwIBAgIOAThZMPecAAAAAEtWORQwDQYJKoZIhvcNAQEFBQAwdjEO
+MAwGA1UEAwwFY21vcnQxGDAWBgNVBAsMDzAwREQwMDAwMDAwSmdGRzEXMBUGA1UE
+CgwOU2FsZXNmb3JjZS5jb20xFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xCzAJBgNV
+BAgMAkNBMQwwCgYDVQQGEwNVU0EwHhcNMTIwNzA1MjIwOTM3WhcNMTQwNzA1MjIw
+OTM3WjB2MQ4wDAYDVQQDDAVjbW9ydDEYMBYGA1UECwwPMDBERDAwMDAwMDBKZ0ZH
 MRcwFQYDVQQKDA5TYWxlc2ZvcmNlLmNvbTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNj
-bzELMAkGA1UECAwCQ0ExDDAKBgNVBAYTA1VTQTAeFw0xMzA0MjQyMTI0MTNaFw0x
-NTA0MjQyMTI0MTNaMH4xFjAUBgNVBAMMDVNhbGVzZm9yY2Vjb20xGDAWBgNVBAsM
-DzAwRGkwMDAwMDAwS3g0bzEXMBUGA1UECgwOU2FsZXNmb3JjZS5jb20xFjAUBgNV
-BAcMDVNhbiBGcmFuY2lzY28xCzAJBgNVBAgMAkNBMQwwCgYDVQQGEwNVU0EwggEi
-MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC5haZ5nsv65jNxBPcJLB1TYLwC
-sBRV7nLt6gJbYfoqZUddVNzvD3d2x3YcLP/R+s2ev6DRk0WVSy5Xqa0c/wpIrIWz
-Gnve+Nd+yTkwdf067mEsqbJGUP2oIQe27jOWkmoOwr4WvPUQ+krqY+U8mawYTkbv
-4jO8KMljPbaiQ9MfsjKbjdNoYY2VRlscVr9Kzk/ZzsToqdGmisPH4JzcXUFA1GsH
-SKKQbJ9/NDZ9aKokUKrbR+Vgfnv4x/v9GfCTZ76n5fAHOupvbdPaTBrR8sRtdiQJ
-2Rm99DrL9cbw12Fd8xnHkZQf5rKgBcXR95M5hT+z8+zxpz18HG+o7iHwlsmpAgMB
-AAGjge0wgeowHQYDVR0OBBYEFDM5A0K8VRx/mT5ZQwVDKGM2i/ThMIG3BgNVHSME
-ga8wgayAFDM5A0K8VRx/mT5ZQwVDKGM2i/ThoYGDpIGAMH4xFjAUBgNVBAMMDVNh
-bGVzZm9yY2Vjb20xGDAWBgNVBAsMDzAwRGkwMDAwMDAwS3g0bzEXMBUGA1UECgwO
-U2FsZXNmb3JjZS5jb20xFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xCzAJBgNVBAgM
-AkNBMQwwCgYDVQQGEwNVU0GCDgE+Pe6zoAAAAAAvvn2CMA8GA1UdEwEB/wQFMAMB
-Af8wDQYJKoZIhvcNAQEFBQADggEBAHy64JV5zb5QLmHh9O06JqNk4TmGOGpcr400
-aJ/nBcb1lczLqXk+ErRZLdfUNvQ5TQO9Hmh7qXzt4f/BtBOK6FI0BqxCLj2k6wyq
-Nr+aDSb/NGYjdvH5HBOgY2tVXg1hZxCYeW8Er2tQ3wIxfggthug3K+7LXVd+idqg
-DEHoJ1NNuGW4p+iXfsffmslaAs7/brNkczsBY0aRd90x4vzmOs3DHyR77BYdOCYF
-mjta5xWzUTBht7LYHlTF6Vl+k57eBYWVzD3fTJZXuGXzBf49gnVabMlVe2bKYW74
-3AjIq0wzxXvcBG4BzZSO4nsi2nP9dQKLxA/iK4/4/K4OgHORSXc=
+bzELMAkGA1UECAwCQ0ExDDAKBgNVBAYTA1VTQTCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBANWAu6pygUvEyXMiqWSvnFAIdfbDzjNkJMB1jWqiVNaLyVxW
+hBKYLZWWPk6nAG+oCNvCbzwQD+UlQKdAkkNgHP5A37lSNVSvk/EuUNaPoJcUJGqT
+ZCrzgxmeyma8JMyJiAaskUkcDodSk06EcAchZZhpjr32NKygCCwUE9bFu3wb+yHG
+bg0l/JadlMi1HWK8G77H7GGWa3tO6Ap5+WvzKdCopaX0DZ9BDYq0fdtNN5Yj6kUk
+apfB2R4cUIuxQL4sZ05HKomfGSH7JM8ye8GM8KQo1wz7GXOdS5HyQ+a+fKDNWhjy
+n9CzhAqfXXXwZEF5IbH60ZgOLygLALqK6V6IJXcCAwEAAaOB4zCB4DAdBgNVHQ4E
+FgQUWrzReacKvs2piav+L0N/mW0N1XEwga0GA1UdIwSBpTCBooAUWrzReacKvs2p
+iav+L0N/mW0N1XGheqR4MHYxDjAMBgNVBAMMBWNtb3J0MRgwFgYDVQQLDA8wMERE
+MDAwMDAwMEpnRkcxFzAVBgNVBAoMDlNhbGVzZm9yY2UuY29tMRYwFAYDVQQHDA1T
+YW4gRnJhbmNpc2NvMQswCQYDVQQIDAJDQTEMMAoGA1UEBhMDVVNBgg4BOFkw958A
+AAAAS1Y5FDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQB9NZwW
+qAbHJz4Co8lyA2tUxHC290liIVSAEKUF0AOZ/JqksVnGSaQgYL7VRjnihr9ut262
+Y78fFfRBhr0LGx0NzvQO3K8cEqLT2Cxo8ikDScul3KKUc46qri6e15oTwJlCrP5e
+CElo9/j+vFZ1uYXnNBpkjBYQmEAGLvbxsPHBsSm5RDIIvfRlhwve3fgyFeYCIZtY
+ysC+Usp1qGz++9u1BedsOyc5Eq9xUsFcjlSxUsyGVC47UY6z1Kic9fHOp5dBQLH3
+Dq0fNs1H0HlttGAv1AfzenoyVq7ChKryG7Ulia0arOks0OBlMsr99MLZodq5+jh4
+hlPyKg4JG26m4PIH
 -----END CERTIFICATE-----
 </param-value>
         </init-param>
@@ -63,7 +63,7 @@ mjta5xWzUTBht7LYHlTF6Vl+k57eBYWVzD3fTJZXuGXzBf49gnVabMlVe2bKYW74
         </init-param>
         <init-param>
             <param-name>audience</param-name>
-            <param-value>www.salesforce.com</param-value>
+            <param-value>https://samlsp.herokuapp.com/_saml</param-value>
         </init-param>
         <init-param>
             <param-name>samlendpoint</param-name>
