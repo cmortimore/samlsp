@@ -21,7 +21,7 @@
         </init-param>
         <init-param>
             <param-name>idpurl</param-name>
-            <param-value>https://communities-dev-ed.my.salesforce.com/idp/endpoint/HttpRedirect</param-value>
+            <param-value>https://identitydemo-developer-edition.na15.force.com/customers/idp/endpoint/HttpRedirect</param-value>
         </init-param>
         <init-param>
             <param-name>cert</param-name>
