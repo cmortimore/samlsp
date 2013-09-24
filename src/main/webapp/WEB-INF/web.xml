@@ -8,8 +8,7 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-
-
+   
     <filter>
         <filter-name>SAMLFilter</filter-name>
         <filter-class>
@@ -17,42 +16,41 @@
         </filter-class>
         <init-param>
             <param-name>issuer</param-name>
-            <param-value>https://communities-dev-ed.my.salesforce.com</param-value>
+            <param-value>https://customer.my.salesforce.com</param-value>
         </init-param>
         <init-param>
             <param-name>idpurl</param-name>
-            <param-value>https://identitydemo-developer-edition.na15.force.com/customers/idp/endpoint/HttpRedirect</param-value>
+            <param-value>https://customer.my.salesforce.com/idp/endpoint/HttpRedirect</param-value>
         </init-param>
         <init-param>
             <param-name>cert</param-name>
             <param-value>-----BEGIN CERTIFICATE-----
-MIIEcjCCA1qgAwIBAgIOAUET+HSSAAAAAEGNeT8wDQYJKoZIhvcNAQEFBQAwfjEW
-MBQGA1UEAwwNSWRlbnRpdHkgRGVtbzEYMBYGA1UECwwPMDBEaTAwMDAwMDBhTnBP
-MRcwFQYDVQQKDA5TYWxlc2ZvcmNlLmNvbTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNj
-bzELMAkGA1UECAwCQ0ExDDAKBgNVBAYTA1VTQTAeFw0xMzA5MTIyMDU5MTFaFw0x
-NTA5MTIyMDU5MTFaMH4xFjAUBgNVBAMMDUlkZW50aXR5IERlbW8xGDAWBgNVBAsM
-DzAwRGkwMDAwMDAwYU5wTzEXMBUGA1UECgwOU2FsZXNmb3JjZS5jb20xFjAUBgNV
-BAcMDVNhbiBGcmFuY2lzY28xCzAJBgNVBAgMAkNBMQwwCgYDVQQGEwNVU0EwggEi
-MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCIXKnI6VdgN7GUeEG3FLAjZAW2
-aJ1q8NhTwKhLhnzg3q5PvuSTyF868qFPeAM3G6WDZ7hL7G9dDuENG/u+ZccpZiLK
-XTTcDIu00OEeejHMwVQmaDS7eiZyjGfzxQWa36zwtdJaE2Zr6Uzr8uNFCbE5Nd7Y
-KSyP5Grqc5uRsagH9Py5Se2U3MLffxkKZFdAieordGTIsUVmyJCbOEt71TLdL0pi
-dbrqgjgfkIr9C6frb8Qlhg7KxsPRqqcSAwCDwqbdO4vqGb+kCcgpmCb4le6SPu26
-tBlD0UUN2VJBBH+uJFn4+RlUOrvxRLrCko5IjwkgPY7nhC54msVEmWbpsE2lAgMB
-AAGjge0wgeowHQYDVR0OBBYEFMxjWdFALv0fWSGtW+vKE/USc2N9MIG3BgNVHSME
-ga8wgayAFMxjWdFALv0fWSGtW+vKE/USc2N9oYGDpIGAMH4xFjAUBgNVBAMMDUlk
-ZW50aXR5IERlbW8xGDAWBgNVBAsMDzAwRGkwMDAwMDAwYU5wTzEXMBUGA1UECgwO
-U2FsZXNmb3JjZS5jb20xFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xCzAJBgNVBAgM
-AkNBMQwwCgYDVQQGEwNVU0GCDgFBE/h0lQAAAABBjXk/MA8GA1UdEwEB/wQFMAMB
-Af8wDQYJKoZIhvcNAQEFBQADggEBAINFVuBumLzpshNtRkBJ+E9ZWw0FoCi5KReh
-xJySvq+lg2g2pf1fKc/qRgGvqhXC6jYlCO+XDnx/OiqTppk5All/uegCIpl+BLfX
-QXVMH4IBrmz00DX6O/WLD1UTOIdvnF8dPAjCzqIP4GsvMlPUCi8/QQMiyWTxv79Q
-7JsU2S7OJ66FNBlY8w4JWzB1j1/Mcd765703KpDZfuN7qpqjWwz12IajTkxZlOAh
-IkhAkhZjRKfsCq41f45TUkFGNUvUbqHbvXmN4gFxnviN+MOi8SgJeGNxqKNBdtq1
-AWeTpkCIxLQ66wmbvDN0gckSOdfCD2atwgav3wGVDq0QOyfJnpM=
------END CERTIFICATE-----
-
-</param-value>
+MIIEnDCCA4SgAwIBAgIOAUFHxmwqAAAAABaWwxQwDQYJKoZIhvcNAQEFBQAwgYsx
+IzAhBgNVBAMMGlRoZSBTaWVycmEgQ2x1YiBGb3VuZGF0aW9uMRgwFgYDVQQLDA8w
+MERmMDAwMDAwMktrV0gxFzAVBgNVBAoMDlNhbGVzZm9yY2UuY29tMRYwFAYDVQQH
+DA1TYW4gRnJhbmNpc2NvMQswCQYDVQQIDAJDQTEMMAoGA1UEBhMDVVNBMB4XDTEz
+MDkyMjIyMjQ0OFoXDTE1MDkyMjIyMjQ0OFowgYsxIzAhBgNVBAMMGlRoZSBTaWVy
+cmEgQ2x1YiBGb3VuZGF0aW9uMRgwFgYDVQQLDA8wMERmMDAwMDAwMktrV0gxFzAV
+BgNVBAoMDlNhbGVzZm9yY2UuY29tMRYwFAYDVQQHDA1TYW4gRnJhbmNpc2NvMQsw
+CQYDVQQIDAJDQTEMMAoGA1UEBhMDVVNBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEA6Xo4bqtlwrxepzDC/3kwYxq1jz4yL876nUVAu68h7kzPD1q1NFNJ
+rZ4cF5CeZLBsWp0L1/LxagL8YgOc4IPLHjfgTkQQQg1pxtYfDTfWg5Zic6kwuLLG
+HwzbDmHK6wW72AtTOZrg5ISQxOpWiCeUvAPNJkL1eAMj2bnql9IB6x8V+BUPmn8t
+Nu4ddpvgu7y+PCQuVnxWTMZusXqwhd7YM0xVuYaKdhnsxzvGTvL3yRCwIFSc9x+B
+S+6gzUa4tW6YVUrRmJ91/1g6rijtPrgQPKAFJSlm2QwnL04XEmByX2DIITLGRMGf
+XhIpsXNYquv1JJb3LZSqLUKauOtkKecASQIDAQABo4H7MIH4MB0GA1UdDgQWBBTq
+kJPPpyTYe2BecNWoD+/MiWQVSDCBxQYDVR0jBIG9MIG6gBTqkJPPpyTYe2BecNWo
+D+/MiWQVSKGBkaSBjjCBizEjMCEGA1UEAwwaVGhlIFNpZXJyYSBDbHViIEZvdW5k
+YXRpb24xGDAWBgNVBAsMDzAwRGYwMDAwMDAyS2tXSDEXMBUGA1UECgwOU2FsZXNm
+b3JjZS5jb20xFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xCzAJBgNVBAgMAkNBMQww
+CgYDVQQGEwNVU0GCDgFBR8ZsLQAAAAAWlsMUMA8GA1UdEwEB/wQFMAMBAf8wDQYJ
+KoZIhvcNAQEFBQADggEBALzC898H6ifi3mBOqcAUiUgUXtmsYyN04qpS7kCT/KG0
+n9n154VgQf/3P+8rjWuHv7+Lnqf/dpylZDr4z79kK/1WRiqtXQNg29yS2TxXcDad
+ukWDSzY2OElCAQ55MGeHZFSDKNAh07ktgrmSiEVBUJhLGCgxjNauZwLysCFbmr4o
+8C48zglrPkmojtRDaCKAekNN7CDDgCMFNTAPcP5hYAr9n4hZ6YP2vqPHB2A7xyFu
+/OMoImp34cITSB/Zc9JNaD2lXNQMZCgrRTy899UcVhKmsScb9AwW1LV8kvdSac7V
+yOLWUm15yho7ep7WpfAAGy69nrdJqmpX1rcpdfBRVtw=
+-----END CERTIFICATE-----</param-value>
         </init-param>
         <init-param>
             <param-name>cert2</param-name>
@@ -60,20 +58,23 @@ AWeTpkCIxLQ66wmbvDN0gckSOdfCD2atwgav3wGVDq0QOyfJnpM=
         </init-param>
         <init-param>
             <param-name>recipient</param-name>
-            <param-value>https://samlsp.herokuapp.com/_saml</param-value>
+            <param-value>https://website.herokuapp.com/secure/_saml</param-value>
         </init-param>
         <init-param>
             <param-name>audience</param-name>
-            <param-value>https://samlsp.herokuapp.com/_saml</param-value>
+            <param-value>https://website.herokuapp.com/secure/_saml</param-value>
         </init-param>
         <init-param>
             <param-name>samlendpoint</param-name>
-            <param-value>/_saml</param-value>
+            <param-value>/secure/_saml</param-value>
         </init-param>
     </filter>
     <filter-mapping>
         <filter-name>SAMLFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/secure/*</url-pattern>
     </filter-mapping>
 
 </web-app>
+
+
+
