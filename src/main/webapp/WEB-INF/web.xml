@@ -58,11 +58,11 @@ yOLWUm15yho7ep7WpfAAGy69nrdJqmpX1rcpdfBRVtw=
         </init-param>
         <init-param>
             <param-name>recipient</param-name>
-            <param-value>https://website.herokuapp.com/secure/_saml</param-value>
+            <param-value>https://samlsp.herokuapp.com/secure/_saml</param-value>
         </init-param>
         <init-param>
             <param-name>audience</param-name>
-            <param-value>https://website.herokuapp.com/secure/_saml</param-value>
+            <param-value>https://samlsp.herokuapp.com/secure/_saml</param-value>
         </init-param>
         <init-param>
             <param-name>samlendpoint</param-name>
