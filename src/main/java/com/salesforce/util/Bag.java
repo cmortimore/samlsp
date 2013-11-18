@@ -28,6 +28,16 @@ public class Bag extends LinkedHashMap {
         }
     }
 
+
+    public ArrayList getValues(Object key) {
+        ArrayList values = (ArrayList) super.get(key);
+        if (values != null && !values.isEmpty()) {
+            return values;
+        } else {
+            return null;
+        }
+    }
+
     public boolean containsValue(Object value) {
         return values().contains(value);
     }
