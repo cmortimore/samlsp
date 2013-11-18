@@ -13,7 +13,7 @@ if (identity != null) {
 
 <%
 	
-    Iterator it = identity.entrySet().iterator();
+    Iterator it = identity.keySet().iterator();
     while (it.hasNext()) {
         Map.Entry pairs = (Map.Entry)it.next();
 		%><b><%= pairs.getKey() %>:</b><%= pairs.getValue() %><br/><%
