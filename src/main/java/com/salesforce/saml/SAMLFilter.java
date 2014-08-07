@@ -118,7 +118,7 @@ public class SAMLFilter implements Filter {
                 //Get the request and relaystate
                 String encodedResponse = httpRequest.getParameter("SAMLResponse");
                 String relayState = request.getParameter("RelayState");
-                if ((relayState == null) || ( relayState.equals(""))) relayState = "/";
+                if ((relayState == null) || ( relayState.equals(""))) relayState = "/secure/";
 
                 //validate the response
                 SAMLValidator sv = new SAMLValidator();
